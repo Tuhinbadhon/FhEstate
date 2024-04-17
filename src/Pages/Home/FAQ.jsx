@@ -31,80 +31,92 @@ const FAQ = () => {
               className="w-full py-3 pl-12 text-sm rounded-full sm:w-96 focus:outline-none dark:bg-gray-100 dark:text-gray-800 focus:dark:bg-gray-50"
             />
           </div>
-          <div
-            className="flex flex-col w-full divide-y sm:flex-row sm:divide-y-0 
-                    sm:divide-x sm:px-8 lg:px-12 xl:px-32 dark:divide-gray-300
-                     lg:text-2xl text-lg font-medium"
-          >
-            <div className="flex flex-col w-full divide-y dark:divide-gray-300">
-              <a
-                rel="noopener noreferrer"
-                href="#"
-                className="hover:scale-125 hover:text-fuchsia-500 flex items-center justify-center p-4 sm:py-8 lg:py-12"
-              >
-                Billing
-              </a>
-              <a
-                rel="noopener noreferrer"
-                href="#"
-                className="hover:scale-125 hover:text-fuchsia-500 flex items-center justify-center p-4 sm:py-8 lg:py-12"
-              >
-                Support
-              </a>
-              <a
-                rel="noopener noreferrer"
-                href="#"
-                className="hover:scale-125 hover:text-fuchsia-500 flex items-center justify-center p-4 sm:py-8 lg:py-12"
-              >
-                Account
-              </a>
-            </div>
-            <div className="flex flex-col w-full divide-y dark:divide-gray-300">
-              <a
-                rel="noopener noreferrer"
-                href="#"
-                className="hover:scale-125 hover:text-fuchsia-500 flex items-center justify-center p-4 sm:py-8 lg:py-12"
-              >
-                Features
-              </a>
-              <a
-                rel="noopener noreferrer"
-                href="#"
-                className="hover:scale-125 hover:text-fuchsia-500 flex items-center justify-center p-4 sm:py-8 lg:py-12"
-              >
-                Contact us
-              </a>
-              <a
-                rel="noopener noreferrer"
-                href="#"
-                className="hover:scale-125 hover:text-fuchsia-500 flex items-center justify-center p-4 sm:py-8 lg:py-12"
-              >
-                My orders
-              </a>
-            </div>
-            <div className="hidden w-full divide-y sm:flex-col sm:flex dark:divide-gray-300">
-              <a
-                rel="noopener noreferrer"
-                href="#"
-                className="hover:scale-125 hover:text-fuchsia-500 flex items-center justify-center p-4 sm:py-8 lg:py-12"
-              >
-                Enterprise
-              </a>
-              <a
-                rel="noopener noreferrer"
-                href="#"
-                className="hover:scale-125 hover:text-fuchsia-500 flex items-center justify-center p-4 sm:py-8 lg:py-12"
-              >
-                Privacy
-              </a>
-              <a
-                rel="noopener noreferrer"
-                href="#"
-                className="hover:scale-125 hover:text-fuchsia-500 flex items-center justify-center p-4 sm:py-8 lg:py-12"
-              >
-                Developers
-              </a>
-            </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <a
+              rel="noopener noreferrer"
+              href="#"
+              className="hover:scale-125 hover:text-fuchsia-500 flex items-center justify-center p-4 border border-fuchsia-600 rounded-lg"
+            >
+              Billing
+            </a>
+            <a
+              rel="noopener noreferrer"
+              href="#"
+              className="hover:scale-125 hover:text-fuchsia-500 flex items-center justify-center p-4 border border-fuchsia-600 rounded-lg"
+            >
+              Support
+            </a>
+            <a
+              rel="noopener noreferrer"
+              href="#"
+              className="hover:scale-125 hover:text-fuchsia-500 flex items-center justify-center p-4 border border-fuchsia-600 rounded-lg"
+            >
+              Account
+            </a>
+            <a
+              rel="noopener noreferrer"
+              href="#"
+              className="hover:scale-125 hover:text-fuchsia-500 flex items-center justify-center p-4 border border-fuchsia-600 rounded-lg"
+            >
+              Features
+            </a>
+            <a
+              rel="noopener noreferrer"
+              href="#"
+              className="hover:scale-125 hover:text-fuchsia-500 flex items-center justify-center p-4 border border-fuchsia-600 rounded-lg"
+            >
+              Contact us
+            </a>
+            <a
+              rel="noopener noreferrer"
+              href="#"
+              className="hover:scale-125 hover:text-fuchsia-500 flex items-center justify-center p-4 border border-fuchsia-600 rounded-lg"
+            >
+              My orders
+            </a>
+            <a
+              rel="noopener noreferrer"
+              href="#"
+              className="hover:scale-125 hover:text-fuchsia-500 flex items-center justify-center p-4 border border-fuchsia-600 rounded-lg"
+            >
+              Enterprise
+            </a>
+            <a
+              rel="noopener noreferrer"
+              href="#"
+              className="hover:scale-125 hover:text-fuchsia-500 flex items-center justify-center p-4 border border-fuchsia-600 rounded-lg"
+            >
+              Privacy
+            </a>
+            <a
+              rel="noopener noreferrer"
+              href="#"
+              className="hover:scale-125 hover:text-fuchsia-500 flex items-center justify-center p-4 border border-fuchsia-600 rounded-lg"
+            >
+              Developers
+            </a>
+            {/* Add three more FAQ links */}
+            <a
+              rel="noopener noreferrer"
+              href="#"
+              className="hover:scale-125 hover:text-fuchsia-500 flex items-center justify-center p-4 border border-fuchsia-600 rounded-lg"
+            >
+              Terms of Service
+            </a>
+            <a
+              rel="noopener noreferrer"
+              href="#"
+              className="hover:scale-125 hover:text-fuchsia-500 flex items-center justify-center p-4 border border-fuchsia-600 rounded-lg"
+            >
+              Refund Policy
+            </a>
+            <a
+              rel="noopener noreferrer"
+              href="#"
+              className="hover:scale-125 hover:text-fuchsia-500 flex items-center justify-center p-4 border border-fuchsia-600 rounded-lg"
+            >
+              Shipping Information
+            </a>
           </div>
         </div>
       </section>
