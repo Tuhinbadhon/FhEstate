@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "title": "Oceanview Penthouse",
+    "tag": ["Penthouse" ,"Ocenview"],
+    "description": "Indulge in the epitome of luxury living with this stunning oceanview penthouse offering breathtaking vistas and modern amenities.",
+    "price": "$5,000,000",
+    "status": "sale",
+    "area": "3000 sq ft",
+    "location": "Miami Beach, Florida",
+    "facilities": ["Spacious living room", "Private swimming pool", "Gourmet kitchen"],
+    "image": "https://i.ibb.co/gJvyMmv/luxury-image-10.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Beachfront Villa",
+    "tag": ["Villa", "Beach"],
+    "description": "Escape to your private paradise with this exquisite beachfront villa featuring luxurious amenities and direct beach access.",
+    "price": "$7,500,000",
+    "status": "sale/rent",
+    "area": "5000 sq ft",
+    "location": "Maui, Hawaii",
+    "facilities": ["Expansive living space", "Infinity pool", "Chef's kitchen"],
+    "image": "https://i.ibb.co/q1JWcsP/luxury-image-1.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Luxury Resort",
+    "tag": ["Resort","Pool"],
+    "description": "Experience unparalleled hospitality and relaxation at our luxury resort, featuring world-class amenities and serene surroundings.",
+    "price": "$12,000,000",
+    "status": "sale",
+    "area": "10 acres",
+    "location": "Bora Bora, French Polynesia",
+    "facilities": ["Spa and wellness center", "Beachfront dining", "Fitness center"],
+    "image": "https://i.ibb.co/1GT8pDv/luxury-image-3.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Private Island Retreat",
+    "tag": ["Island","Nature"],
+    "description": "Own your slice of paradise with this exclusive private island retreat, offering unparalleled privacy and natural beauty.",
+    "price": "$20,000,000",
+    "status": "sale/rent",
+    "area": "50 acres",
+    "location": "Caribbean Sea",
+    "facilities": ["Luxury villas", "Helipad", "Marina"],
+    "image": "https://i.ibb.co/NsrCDGY/luxury-image-8.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Mansion with Ocean Views",
+    "tag": ["Mansion","Ocean"],
+    "description": "Live in luxury with this magnificent mansion boasting panoramic ocean views, grand interiors, and extensive grounds.",
+    "price": "$15,000,000",
+    "status": "sale",
+    "area": "8000 sq ft",
+    "location": "Malibu, California",
+    "facilities": ["Formal dining room", "Home theater", "Tennis court"],
+    "image": "https://i.ibb.co/g9tBK1H/luxury-image-11.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Luxury Lakeside Villa",
+    "tag": ["Villa","Lake"],
+    "description": "Escape to this luxurious lakeside villa, offering serene waterfront views and elegant living spaces for ultimate relaxation.",
+    "price": "$9,500,000",
+    "status": "sale/rent",
+    "area": "6000 sq ft",
+    "location": "Lake Como, Italy",
+    "facilities": ["Private dock", "Outdoor terrace", "Wine cellar"],
+    "image": "https://i.ibb.co/wBgyjYR/luxury-image-5.jpg"
+  }
+]
