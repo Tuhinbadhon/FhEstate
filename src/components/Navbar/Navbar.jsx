@@ -88,7 +88,11 @@ const Navbar = () => {
       <div className="navbar bg-base-100">
         <div className="navbar-start">
           <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+            <div
+              tabIndex={0}
+              role="button"
+              className="btn btn-ghost p-0 lg:hidden"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -116,13 +120,13 @@ const Navbar = () => {
             <Link to="/">
               {" "}
               <img
-                className="w-10 h-10"
-                src="/public/sbRealEstatesLogo.png"
+                className="lg:w-12 lg:h-12 w-10 h-10"
+                src="/public/logo1.png"
                 alt=""
               />{" "}
             </Link>
-            <Link to="/" className="btn btn-ghost text-xl p-0">
-              SB ESTATES
+            <Link to="/" className="btn btn-ghost lg:text-xl p-0">
+              FH ESTATES
             </Link>
           </div>
         </div>
