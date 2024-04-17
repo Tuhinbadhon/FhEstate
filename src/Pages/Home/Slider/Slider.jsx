@@ -12,7 +12,7 @@ import "./sliderStyle.css";
 import { Pagination, Navigation } from "swiper/modules";
 const Slider = () => {
   return (
-    <div className="max-[450px]:p-3">
+    <div className="max-[450px]:p-3 md:p-3">
       <Swiper
         slidesPerView={1}
         spaceBetween={30}

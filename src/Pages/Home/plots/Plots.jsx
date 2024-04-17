@@ -32,7 +32,7 @@ const Plots = () => {
   };
   const viewDetailsDeny = () => {
     Swal.fire({
-      title: "Login to know more",
+      title: "Please Login to know more",
       // showDenyButton: true,
       showCancelButton: true,
       confirmButtonText: "Login",
@@ -47,7 +47,7 @@ const Plots = () => {
   return (
     <div className="">
       {/* paragraph section */}
-      <div className="text-center max-w-screen-sm mx-auto px-2 lg:px-0 mb-6 lg:mt-20">
+      <div className="text-center max-w-screen-sm mx-auto  px-2 lg:px-0 mb-6 lg:mt-20">
         <h1 className="text-lg font-medium lg:text-3xl lg:font-bold  ">
           Our Property Collections
         </h1>
@@ -61,7 +61,7 @@ const Plots = () => {
       </div>
 
       {/* card section */}
-      <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:mt-10 gap-4 lg:gap-6">
+      <div className="grid sm:grid-cols-1 max-[450px]:mx-4   md:grid-cols-2 lg:grid-cols-3 lg:mt-10 gap-4 lg:gap-6">
         {properties.map((property, index) => (
           <div
             key={property.id}
@@ -70,8 +70,8 @@ const Plots = () => {
             onMouseLeave={() => toggleHoverState(index)}
           >
             <div
-              className={`card w-auto bg-base-100 shadow-xl ${
-                hoverStates[index] ? "animate__animated animate__bounce" : ""
+              className={`card border h-full w-auto bg-base-100 shadow-xl ${
+                hoverStates[index] ? "animate__animated animate__zoomIn" : ""
               }`}
             >
               <figure className="  p-4">
@@ -81,7 +81,7 @@ const Plots = () => {
                   alt={property.tag}
                 />
               </figure>
-              <div className="card-body">
+              <div className=" p-5">
                 <h2 className="card-title">
                   {property.title}
                   <sup className="text-xs text-white bg-indigo-400 px-2 py-1 rounded-full">
@@ -92,7 +92,7 @@ const Plots = () => {
                 <p>{property.location} </p>
                 <p>Total Area of : {property.area} </p>
                 <div className="mt-4 flex flex-row justify-between  ">
-                  <div className=" justify-end  my-auto">
+                  <div className=" flex gap-1  my-auto">
                     <div className="badge p-3 badge-outline">
                       {" "}
                       {property.tag[0]}{" "}
@@ -110,9 +110,9 @@ const Plots = () => {
                   ) : (
                     <button
                       onClick={viewDetailsDeny}
-                      className="btn btn-secondary rounded-3xl"
+                      className="btn bg-indigo-400 text-white rounded-xl"
                     >
-                      Know More
+                      View Details
                     </button>
                   )}
                 </div>
