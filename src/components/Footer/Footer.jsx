@@ -8,7 +8,13 @@ const Footer = () => {
             p-10 bg-base-200 text-base-content flex flex-col  "
       >
         <div className="font-semibold text-2xl text-center mb-4">
-          <p>Copyright © 2024 - All right reserved by SB Estates Ltd</p>
+          <p>
+            Copyright © 2024 - All right reserved by{" "}
+            <span className=" text-4xl font-bold max-[450px]:text-2xl bg-gradient-to-r from-green-500 to-[#59C6D2] text-transparent bg-clip-text">
+              FH Estates
+            </span>{" "}
+            Ltd
+          </p>
         </div>
         <div className="w-full flex  lg:flex-row md:flex-row flex-col gap-4 lg:justify-between ">
           <div className="flex flex-col  text-center  ">
@@ -20,8 +26,8 @@ const Footer = () => {
           </div>
           <div className="flex flex-col gap-1 text-center">
             <h6 className="footer-title">Contacts</h6>
-            <a className="link link-hover">+8801815555555</a>
-            <a className="link link-hover">Email: sbdcc20@gmail.com</a>
+            <a className="link link-hover">+8801815-0000000</a>
+            <a className="link link-hover">tuhinbadhon@gmail.com</a>
           </div>
           <div className="text-center">
             <h6 className="footer-title">Social</h6>
@@ -63,7 +69,6 @@ const Footer = () => {
           </div>
 
           <form className="">
-            <h6 className="footer-title text-center">Newsletter</h6>
             <fieldset className="form-control lg:w-80 mx-auto">
               <label className="label mx-auto">
                 <span className="label-text">Enter your email address</span>
