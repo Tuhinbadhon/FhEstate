@@ -12,7 +12,7 @@ import "./sliderStyle.css";
 import { Pagination, Navigation } from "swiper/modules";
 const Slider = () => {
   return (
-    <div className="">
+    <div className="max-[450px]:p-3">
       <Swiper
         slidesPerView={1}
         spaceBetween={30}
@@ -22,13 +22,13 @@ const Slider = () => {
         }}
         navigation={true}
         modules={[Pagination, Navigation]}
-        className="mySwiper lg:max-w-full md:max-w-screen-md sm:max-w-screen-sm 
+        className="mySwiper lg:max-w-full  md:max-w-screen-md sm:max-w-screen-sm  
                 rounded-xl"
       >
         <SwiperSlide>
           <img
             className="z-[1]"
-            src="https://i.ibb.co/41wbWHw/image03.jpg"
+            src="https://i.ibb.co/Y7Ztr1W/image02.jpg"
             alt=""
           />
           {/* <div className="z-[2] absolute  max-w-xs rounded-md shadow-md bg-gradient-to-r from-purple-500 to-pink-500">
@@ -38,16 +38,20 @@ const Slider = () => {
                             </div>
                             <button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md dark:bg-violet-600 dark:text-gray-50">Log in</button>
                         </div>
+                        
                     </div> */}
         </SwiperSlide>
         <SwiperSlide>
           <img src="https://i.ibb.co/X8L6wkv/image01.webp" alt="" />{" "}
         </SwiperSlide>
         <SwiperSlide>
-          <img src="https://i.ibb.co/Y7Ztr1W/image02.jpg" alt="" />{" "}
+          <img src="https://i.ibb.co/41wbWHw/image03.jpg" alt="" />{" "}
         </SwiperSlide>
         <SwiperSlide>
-          <img src="https://i.ibb.co/jbSYWYp/luxury-image-4.jpg" alt="" />{" "}
+          <img
+            src="https://i.ibb.co/HFYyPnS/real-estate-asset-classes-hero.jpg"
+            alt=""
+          />{" "}
         </SwiperSlide>
       </Swiper>
     </div>

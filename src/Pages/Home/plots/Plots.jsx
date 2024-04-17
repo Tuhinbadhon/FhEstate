@@ -47,20 +47,21 @@ const Plots = () => {
   return (
     <div className="">
       {/* paragraph section */}
-      <div className="text-center max-w-screen-sm mx-auto px-2 lg:px-0 mb-6">
+      <div className="text-center max-w-screen-sm mx-auto px-2 lg:px-0 mb-6 lg:mt-20">
         <h1 className="text-lg font-medium lg:text-3xl lg:font-bold  ">
-          Latest Property Collections
+          Our Property Collections
         </h1>
-        <p className="text-sm lg:text-lg font-normal">
-          Explore our websites latest property collection, featuring
-          meticulously curated listings showcasing unparalleled quality and
-          diversity, ensuring every visitor finds their dream property
-          effortlessly.
+        <p className="text-sm lg:text-lg font-normal lg:mt-10">
+          Discover our website's newest array of properties, carefully
+          handpicked to offer a diverse range of options, ensuring that each
+          visitor discovers their ideal property effortlessly. Our collection
+          embodies unparalleled quality and variety, promising an unparalleled
+          experience for every prospective buyer.
         </p>
       </div>
 
       {/* card section */}
-      <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
+      <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:mt-10 gap-4 lg:gap-6">
         {properties.map((property, index) => (
           <div
             key={property.id}
@@ -73,7 +74,7 @@ const Plots = () => {
                 hoverStates[index] ? "animate__animated animate__bounce" : ""
               }`}
             >
-              <figure className="w-full h-[200px] p-3">
+              <figure className="  p-4">
                 <img
                   className="rounded-xl"
                   src={property.image}
@@ -83,18 +84,27 @@ const Plots = () => {
               <div className="card-body">
                 <h2 className="card-title">
                   {property.title}
-                  <div className="badge badge-secondary">
-                    {" "}
-                    {property.status}{" "}
-                  </div>
+                  <sup className="text-xs text-white bg-indigo-400 px-2 py-1 rounded-full">
+                    {property.status}
+                  </sup>
                 </h2>
+
                 <p>{property.location} </p>
                 <p>Total Area of : {property.area} </p>
                 <div className="mt-4 flex flex-row justify-between  ">
+                  <div className=" justify-end  my-auto">
+                    <div className="badge p-3 badge-outline">
+                      {" "}
+                      {property.tag[0]}{" "}
+                    </div>
+                    <div className="badge p-3 badge-outline">
+                      {property.tag[1]}
+                    </div>
+                  </div>
                   {user ? (
                     <Link to={`/property/${property.id}`}>
-                      <button className="btn btn-secondary rounded-3xl">
-                        Know More
+                      <button className="btn bg-indigo-400 text-white rounded-xl">
+                        View Details
                       </button>
                     </Link>
                   ) : (
@@ -105,14 +115,6 @@ const Plots = () => {
                       Know More
                     </button>
                   )}
-
-                  <div className="card-actions justify-end  my-auto">
-                    <div className="badge badge-outline">
-                      {" "}
-                      {property.tag[0]}{" "}
-                    </div>
-                    <div className="badge badge-outline">{property.tag[1]}</div>
-                  </div>
                 </div>
               </div>
             </div>
