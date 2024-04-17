@@ -39,15 +39,15 @@ const Appointment = () => {
   useEffect(() => {
     if (id === "1") {
       setAgentName("Lary Jenkins");
-      setAgentImage("https://i.ibb.co/QchKYNw/agent1.jpg");
+      setAgentImage("https://i.ibb.co/xjsyCLx/leo.webp");
       setAgentDes("Company Agent");
     } else if (id === "2") {
       setAgentName("Marky Pears");
-      setAgentImage("https://i.ibb.co/gSwVD7F/agent2.jpg");
+      setAgentImage("https://i.ibb.co/0yqCgPh/kate.jpg");
       setAgentDes("Property Lawyer");
     } else if (id === "3") {
       setAgentName("Henry Loren");
-      setAgentImage("https://i.ibb.co/jG0PL59/agent3.png");
+      setAgentImage("https://i.ibb.co/FKXPvRS/image11.jpg");
       setAgentDes("Company Agent");
     } else {
       setShowAgents(true);
@@ -56,13 +56,13 @@ const Appointment = () => {
 
   return (
     <div className="my-10 ">
-      <div className="hero min-h-screen bg-base-200 rounded-2xl">
-        <div className="hero-content flex-col lg:flex-row-reverse">
-          <div className="flex flex-col max-w-md p-6 dark:bg-gray-50 dark:text-gray-800">
+      <div className=" min-h-screen bg-base-200 rounded-2xl">
+        <div className=" flex max-[450px]:flex-col p-5  md:flex-row-reverse lg:justify-center lg:items-center gap-5">
+          <div className="flex flex-col max-w-md p-5 rounded-xl dark:bg-gray-50 dark:text-gray-800">
             <img
               src={agentImage}
               alt=""
-              className="flex-shrink-0 object-cover h-64 rounded-sm sm:h-96 dark:bg-gray-500 aspect-square"
+              className="flex-shrink-0 object-cover h-64 rounded-xl sm:h-96 dark:bg-gray-500 aspect-square"
             />
             <div className="flex flex-col">
               <h2 className="text-2xl font-semibold mt-5">{agentName}</h2>

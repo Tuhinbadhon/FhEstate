@@ -40,7 +40,7 @@ const Navbar = () => {
       <div className="w-10 rounded-full">
         <lord-icon
           className="w-full h-full"
-          src="https://cdn.lordicon.com/kthelypq.json"
+          src="https://cdn.lordicon.com/szoiozyr.json"
           trigger="loop"
           delay="500"
           colors="primary:#000"

@@ -43,9 +43,7 @@ const PlotDetails = () => {
           </p>
 
           <Link to="/" className="card-actions justify-end mt-4">
-            <button className="btn max-[450px]:w-full btn-primary">
-              Show All
-            </button>
+            <button className="btn w-full btn-primary">Show All</button>
           </Link>
         </div>
       </div>

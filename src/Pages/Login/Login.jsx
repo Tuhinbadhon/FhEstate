@@ -156,7 +156,7 @@ const Login = () => {
                 type="email"
                 name="email"
                 id="email"
-                placeholder="mr.balok019@gmail.com"
+                placeholder="username@gmail.com"
                 className="w-full px-3 py-2 border rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600"
                 required
               />
@@ -179,7 +179,7 @@ const Login = () => {
                   type={showPass ? "text" : "password"}
                   name="password"
                   id="password"
-                  placeholder="*****"
+                  placeholder="*******"
                   className="w-full px-3 py-2 border rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600"
                   required
                 />

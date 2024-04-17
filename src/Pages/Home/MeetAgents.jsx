@@ -7,7 +7,7 @@ import "animate.css";
 import { Link } from "react-router-dom";
 const MeetAgents = () => {
   return (
-    <div>
+    <div className="h-full">
       {/* paragraph section */}
       <div className="text-center max-w-screen-sm mx-auto px-2 lg:px-0 mb-6">
         <h1 className="text-lg font-medium lg:text-3xl lg:font-bold  ">
@@ -21,11 +21,11 @@ const MeetAgents = () => {
       </div>
 
       {/* card section  */}
-      <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6 justify-center">
+      <div className="grid sm:grid-cols-1 md:grid-cols-3 md:p-4 lg:grid-cols-3 gap-4 lg:gap-6 justify-center">
         {/* agent 1 */}
         <div className=" hover:scale-110 ease-in duration-300  flex flex-col justify-center max-w-xs p-6 shadow-md rounded-xl sm:px-12 dark:bg-gray-50 dark:text-gray-800">
           <img
-            src="https://i.ibb.co/QchKYNw/agent1.jpg"
+            src="https://i.ibb.co/xjsyCLx/leo.webp"
             alt=""
             className="w-32 h-32 mx-auto rounded-full dark:bg-gray-500 aspect-square"
           />
@@ -39,7 +39,7 @@ const MeetAgents = () => {
               </p>
             </div>
             <Link to="agent/1">
-              <button className="btn btn-accent rounded-3xl">
+              <button className="btn bg-indigo-400 text-white hover:bg-indigo-200 hover:text-black rounded-3xl">
                 Make an appointment
               </button>
             </Link>
@@ -84,7 +84,7 @@ const MeetAgents = () => {
         {/* agent 2 */}
         <div className="hover:scale-110 ease-in duration-300 flex flex-col justify-center max-w-xs p-6 shadow-md rounded-xl sm:px-12 dark:bg-gray-50 dark:text-gray-800">
           <img
-            src="https://i.ibb.co/gSwVD7F/agent2.jpg"
+            src="https://i.ibb.co/0yqCgPh/kate.jpg"
             alt=""
             className="w-32 h-32 mx-auto rounded-full dark:bg-gray-500 aspect-square"
           />
@@ -96,7 +96,7 @@ const MeetAgents = () => {
               </p>
             </div>
             <Link to="agent/2">
-              <button className="btn btn-accent rounded-3xl">
+              <button className="btn bg-indigo-400 text-white hover:bg-indigo-200 hover:text-black rounded-3xl">
                 Make an appointment
               </button>
             </Link>
@@ -140,7 +140,7 @@ const MeetAgents = () => {
         {/* agent 3 */}
         <div className="hover:scale-110 ease-in duration-300 flex flex-col justify-center max-w-xs p-6 shadow-md rounded-xl sm:px-12 dark:bg-gray-50 dark:text-gray-800">
           <img
-            src="https://i.ibb.co/jG0PL59/agent3.png"
+            src="https://i.ibb.co/FKXPvRS/image11.jpg"
             alt=""
             className="w-32 h-32 mx-auto rounded-full dark:bg-gray-500 aspect-square"
           />
@@ -152,7 +152,7 @@ const MeetAgents = () => {
               </p>
             </div>
             <Link to="agent/3">
-              <button className="btn btn-accent rounded-3xl">
+              <button className="btn bg-indigo-400 text-white hover:bg-indigo-200 hover:text-black rounded-3xl">
                 Make an appointment
               </button>
             </Link>
