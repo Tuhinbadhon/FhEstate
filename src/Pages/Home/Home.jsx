@@ -12,7 +12,7 @@ const Home = () => {
     <div>
       <HelmetProvider context={helmetContext}>
         <Helmet>
-          <title>SB Estate | Home</title>
+          <title>FH Estate | Home</title>
         </Helmet>
       </HelmetProvider>
       <div className="mt-5 mb-10">

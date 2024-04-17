@@ -10,8 +10,8 @@ const PlotDetails = () => {
   return (
     <div className="my-10 p-2">
       <div className="card lg:card-side bg-base-100 shadow-xl">
-        <figure>
-          <img src={plot.image} alt="Album" />
+        <figure className=" ">
+          <img src={plot.image} alt="Album" className="p-4  " />
         </figure>
         <div className="card-body">
           <div className="flex flex-row justify-between">
@@ -43,7 +43,9 @@ const PlotDetails = () => {
           </p>
 
           <Link to="/" className="card-actions justify-end mt-4">
-            <button className="btn btn-primary">Show All</button>
+            <button className="btn max-[450px]:w-full btn-primary">
+              Show All
+            </button>
           </Link>
         </div>
       </div>

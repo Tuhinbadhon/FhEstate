@@ -125,13 +125,16 @@ const Navbar = () => {
                 alt=""
               />{" "}
             </Link>
-            <Link to="/" className="btn btn-ghost lg:text-xl p-0">
+            <Link
+              to="/"
+              className="btn btn-ghost lg:text-lg font-bold max-[450px]:text-2xl bg-gradient-to-r from-green-500 to-[#59C6D2] text-transparent bg-clip-text p-0"
+            >
               FH ESTATES
             </Link>
           </div>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1 font-semibold text-black">
+          <ul className="menu menu-horizontal px-1 font-semibold  text-black">
             {navlink}
           </ul>
         </div>

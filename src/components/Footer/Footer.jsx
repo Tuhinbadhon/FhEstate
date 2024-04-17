@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -82,9 +83,12 @@ const Footer = () => {
         <div className="font-semibold lg:text-base text-center mb-2">
           <p>
             Copyright © 2024 - All right reserved by{" "}
-            <span className=" lg:text-lg font-bold max-[450px]:text-2xl bg-gradient-to-r from-green-500 to-[#59C6D2] text-transparent bg-clip-text">
-              FH Estates
-            </span>{" "}
+            <Link
+              to="/"
+              className=" lg:text-lg font-bold max-[450px]:text-2xl bg-gradient-to-r from-green-500 to-[#59C6D2] text-transparent bg-clip-text"
+            >
+              FH Estates{" "}
+            </Link>
             Ltd
           </p>
         </div>
