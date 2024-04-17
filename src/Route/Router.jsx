@@ -71,6 +71,14 @@ const router = createBrowserRouter([
           </PrivateRoutes>
         ),
       },
+      {
+        path: "/appointment/:id",
+        element: (
+          <PrivateRoutes>
+            <Appointment />{" "}
+          </PrivateRoutes>
+        ),
+      },
     ],
   },
 ]);

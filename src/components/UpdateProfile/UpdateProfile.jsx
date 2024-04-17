@@ -1,39 +1,46 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { Helmet, HelmetProvider } from "react-helmet-async";
+import { updateProfile } from "firebase/auth"; // Import updateProfile function
+import Swal from "sweetalert2"; // Import Swal for notifications
 
-const UpdateProfile = () => {
+const UpdateProfile = ({ onSuccess }) => {
   const { user } = useContext(AuthContext);
-
-  const navigate = useNavigate(null);
-
+  const navigate = useNavigate();
   const helmetContext = {};
 
   const updateFormHandler = (e) => {
     e.preventDefault();
     const name = e.target.name.value;
     const photoURL = e.target.photoURL.value;
-    console.log(name, photoURL);
-    updateProfile(auth.currentUser, {
+
+    // Update the user's profile using the updateProfile function
+    updateProfile(user, {
       displayName: name,
       photoURL: photoURL,
     })
       .then(() => {
+        // Show success notification
         Swal.fire({
-          text: "Successfuly Updated",
+          text: "Successfully Updated",
           icon: "success",
         });
 
-        navigate("/profile");
+        // Call the onSuccess callback passed from the parent component
+        if (onSuccess) {
+          onSuccess();
+        }
       })
       .catch((error) => {
+        // Show error notification
         Swal.fire({
           text: error.message,
           icon: "error",
         });
       });
   };
+
   return (
     <div>
       <HelmetProvider context={helmetContext}>

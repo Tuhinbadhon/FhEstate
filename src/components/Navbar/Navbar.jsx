@@ -5,6 +5,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useContext } from "react";
 import Swal from "sweetalert2";
+
 import { AuthContext } from "../../Provider/AuthProvider";
 //  "lord-icon" custom element with default properties
 defineElement(lottie.loadAnimation);
@@ -24,6 +25,9 @@ const Navbar = () => {
           </li>
           <li>
             <Link to="/updateprofile">Update Profile</Link>
+          </li>
+          <li>
+            <Link to="/Appointment/0">Appointment</Link>
           </li>
         </>
       ) : (
@@ -121,7 +125,7 @@ const Navbar = () => {
               {" "}
               <img
                 className="lg:w-12 lg:h-12 w-10 h-10"
-                src="/public/logo1.png"
+                src="/logo1.png"
                 alt=""
               />{" "}
             </Link>

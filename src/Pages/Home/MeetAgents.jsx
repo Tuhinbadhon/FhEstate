@@ -32,7 +32,7 @@ const MeetAgents = () => {
           <div className="space-y-4 text-center divide-y dark:divide-gray-300">
             <div className="my-2 space-y-1">
               <h2 className="text-xl font-semibold sm:text-2xl">
-                Lary Jenkins
+                Leonardo DiCaprio
               </h2>
               <p className="px-5 text-xs sm:text-base dark:text-gray-600">
                 Company Agent
@@ -90,7 +90,9 @@ const MeetAgents = () => {
           />
           <div className="space-y-4 text-center divide-y dark:divide-gray-300">
             <div className="my-2 space-y-1">
-              <h2 className="text-xl font-semibold sm:text-2xl">Marky Pears</h2>
+              <h2 className="text-xl font-semibold sm:text-2xl">
+                Kate Winslet
+              </h2>
               <p className="px-5 text-xs sm:text-base dark:text-gray-600">
                 Property Lawyer
               </p>
@@ -146,7 +148,7 @@ const MeetAgents = () => {
           />
           <div className="space-y-4 text-center divide-y dark:divide-gray-300">
             <div className="my-2 space-y-1">
-              <h2 className="text-xl font-semibold sm:text-2xl">Henry Loren</h2>
+              <h2 className="text-xl font-semibold sm:text-2xl">Johnny Depp</h2>
               <p className="px-5 text-xs sm:text-base dark:text-gray-600">
                 Company Agent
               </p>

@@ -1,55 +1,38 @@
 import React, { useContext } from "react";
-import lottie from "lottie-web";
-import { defineElement } from "@lordicon/element";
 import { MdEmail } from "react-icons/md";
+import Swal from "sweetalert2";
+import "sweetalert2/dist/sweetalert2.css"; // Import the Swal CSS
 import UpdateProfile from "../../components/UpdateProfile/UpdateProfile";
-import ReactDOM from "react-dom";
-import { Helmet, HelmetProvider } from "react-helmet-async";
 import { AuthContext } from "../../Provider/AuthProvider";
-
-defineElement(lottie.loadAnimation);
+import { Helmet, HelmetProvider } from "react-helmet-async";
 
 const Profile = () => {
   const { user } = useContext(AuthContext);
   const helmetContext = {};
 
   const photoIcon = (
-    <>
-      <div className="w-10 rounded-full">
-        <lord-icon
-          className="w-full h-full"
-          src="https://cdn.lordicon.com/kthelypq.json"
-          trigger="loop"
-          delay="500"
-          colors="primary:#000"
-          style={{ width: "40px", height: "40px" }}
-        ></lord-icon>
-      </div>
-    </>
+    <div className="w-10 rounded-full">
+      <lord-icon
+        className="w-full h-full"
+        src="https://cdn.lordicon.com/kthelypq.json"
+        trigger="loop"
+        delay="500"
+        colors="primary:#000"
+        style={{ width: "40px", height: "40px" }}
+      ></lord-icon>
+    </div>
   );
 
   const editProfile = () => {
-    <>
-      {/* You can open the modal using document.getElementById('ID').showModal() method */}
-      <button
-        className="btn"
-        onClick={() => document.getElementById("my_modal_4").showModal()}
-      >
-        open modal
-      </button>
-      <dialog id="my_modal_4" className="modal">
-        <div className="modal-box w-11/12 max-w-5xl">
-          <h3 className="font-bold text-lg">Hello!</h3>
-          <p className="py-4">Click the button below to close</p>
-          <div className="modal-action">
-            <form method="dialog">
-              {/* if there is a button, it will close the modal */}
-              <button className="btn">Close</button>
-            </form>
-          </div>
-        </div>
-      </dialog>
-    </>;
+    document.getElementById("update_modal").showModal();
+  };
+
+  const handleProfileUpdateSuccess = () => {
+    // Display SweetAlert notification
+    Swal.fire({
+      text: "Profile updated successfully!",
+      icon: "success",
+    });
   };
 
   return (
@@ -79,10 +62,7 @@ const Profile = () => {
             </p>
             <p>{user.email} </p>
           </span>
-          <button
-            onClick={() => document.getElementById("update_modal").showModal()}
-            className="btn border-indigo-700"
-          >
+          <button onClick={editProfile} className="btn border-indigo-700">
             Edit Profile
           </button>
           {/* modal part */}
@@ -95,7 +75,7 @@ const Profile = () => {
                 </button>
               </form>
 
-              <UpdateProfile />
+              <UpdateProfile onSuccess={handleProfileUpdateSuccess} />
             </div>
           </dialog>
         </div>

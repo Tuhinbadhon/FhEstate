@@ -1,8 +1,27 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { useParams } from "react-router-dom";
+import ReactDOM from "react-dom";
+import { Helmet, HelmetProvider } from "react-helmet-async";
+import Swal from "sweetalert2";
+import MeetAgents from "../Home/MeetAgents";
+import AgentsAppintment from "./AgentsAppointment";
+import { AuthContext } from "../../Provider/AuthProvider";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Appointment = () => {
+  const { loading } = useContext(AuthContext);
+
+  if (loading) {
+    return (
+      <span className="loading mx-auto loading-spinner text-warning"></span>
+    );
+  }
+
+  const helmetContext = {};
+
   const { id } = useParams();
+  const [agentId, setAgentId] = useState(id);
   const [agentName, setAgentName] = useState("");
   const [agentImage, setAgentImage] = useState("");
   const [agentDes, setAgentDes] = useState("");
@@ -37,16 +56,16 @@ const Appointment = () => {
   });
 
   useEffect(() => {
-    if (id === "1") {
-      setAgentName("Lary Jenkins");
+    if (agentId === "1") {
+      setAgentName("Leonardo DiCaprio");
       setAgentImage("https://i.ibb.co/xjsyCLx/leo.webp");
       setAgentDes("Company Agent");
-    } else if (id === "2") {
-      setAgentName("Marky Pears");
+    } else if (agentId === "2") {
+      setAgentName("Kate Winslet");
       setAgentImage("https://i.ibb.co/0yqCgPh/kate.jpg");
       setAgentDes("Property Lawyer");
-    } else if (id === "3") {
-      setAgentName("Henry Loren");
+    } else if (agentId === "3") {
+      setAgentName("Johnny Depp");
       setAgentImage("https://i.ibb.co/FKXPvRS/image11.jpg");
       setAgentDes("Company Agent");
     } else {
@@ -54,35 +73,60 @@ const Appointment = () => {
     }
   }, [id]);
 
+  const appointmentbtnhandler = (e) => {
+    e.preventDefault();
+
+    const date = e.target.date.value;
+    Swal.fire({
+      text: "Appointment Saved on " + date,
+      icon: "success",
+    });
+
+    e.target.reset();
+  };
+
   return (
-    <div className="my-10 ">
-      <div className=" min-h-screen bg-base-200 rounded-2xl">
-        <div className=" flex max-[450px]:flex-col p-5  md:flex-row-reverse lg:justify-center lg:items-center gap-5">
-          <div className="flex flex-col max-w-md p-5 rounded-xl dark:bg-gray-50 dark:text-gray-800">
-            <img
-              src={agentImage}
-              alt=""
-              className="flex-shrink-0 object-cover h-64 rounded-xl sm:h-96 dark:bg-gray-500 aspect-square"
-            />
-            <div className="flex flex-col">
-              <h2 className="text-2xl font-semibold mt-5">{agentName}</h2>
-              <span className=" pb-2 text-xl dark:text-gray-600 mb-4">
-                {agentDes}
-              </span>
-              <p>
-                <q>
-                  {" "}
-                  As an experienced real estate agent, {agentName} brings years
-                  of industry expertise and a dedication to exceptional customer
-                  service. Their commitment to understanding clients' needs,
-                  coupled with their proactive approach, has earned them a
-                  reputation for fostering strong, positive relationships.
-                </q>
-              </p>
+    <div className="my-10 px-2">
+      <HelmetProvider context={helmetContext}>
+        <Helmet>
+          <title>Appointment</title>
+        </Helmet>
+      </HelmetProvider>
+
+      <div className="lg:hero md:hero min-h-screen bg-base-200 rounded-2xl">
+        <div className="hero-content flex-col lg:flex-row-reverse md:flex-row-reverse">
+          {showAgents ? (
+            <div className="">
+              <AgentsAppintment />
             </div>
-          </div>
-          <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-            <form className="card-body">
+          ) : (
+            <div className="flex flex-col max-w-md p-6 dark:bg-gray-50 dark:text-gray-800">
+              <img
+                src={agentImage}
+                alt=""
+                className="flex-shrink-0 object-cover w-64 h-64 rounded-sm sm:h-96 dark:bg-gray-500 aspect-square"
+              />
+              <div className="flex flex-col text-center lg:text-left">
+                <h2 className="text-2xl font-semibold mt-5">{agentName}</h2>
+                <span className=" pb-2 text-xl dark:text-gray-600 mb-4">
+                  {agentDes}
+                </span>
+                <p className="w-64 lg:w-auto">
+                  <q>
+                    {" "}
+                    As an experienced real estate agent, {agentName} brings
+                    years of industry expertise and a dedication to exceptional
+                    customer service. Their commitment to understanding clients'
+                    needs, coupled with their proactive approach, has earned
+                    them a reputation for fostering strong, positive
+                    relationships.
+                  </q>
+                </p>
+              </div>
+            </div>
+          )}
+          <div className="card shrink-0 max-w-80 shadow-2xl bg-base-100">
+            <form className="card-body" onSubmit={appointmentbtnhandler}>
               <div className="form-control">
                 <label className="label">
                   <span className="label-text font-semibold">
@@ -123,7 +167,10 @@ const Appointment = () => {
                   <option>Selling Property</option>
                   <option>Buying Property</option>
                   <option>Renovation</option>
-                  <option>Lease Property</option>
+                  <option>
+                    <img src={agentImage} alt="" />
+                    Lease Property
+                  </option>
                 </select>
               </div>
               <div className="form-control">
@@ -140,7 +187,7 @@ const Appointment = () => {
                 />
               </div>
               <div className="form-control mt-6">
-                <button className="btn btn-accent">Make An Appointment</button>
+                <button className="btn btn-accent">Submit Appointment</button>
               </div>
             </form>
           </div>
