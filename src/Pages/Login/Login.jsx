@@ -4,11 +4,9 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
-import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import Swal from "sweetalert2";
-import ReactDOM from "react-dom";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 
 const Login = () => {

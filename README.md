@@ -19,7 +19,7 @@
 # The npm packages we have implement in our website are :-
 
 1. Animate.css,
-2. React-leaflet,
+2. AOS Package,
 3. React Hook form,
 4. Swiper slider,
 5. google firebase-tools,
@@ -27,5 +27,4 @@
 7. react-toastify,
 8. lordicon/element,
 9. lottie-web,
-10. AOS Package,
-11. sweetalert.
+10. sweetalert
