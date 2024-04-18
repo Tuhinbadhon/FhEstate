@@ -12,7 +12,7 @@ const Plots = () => {
   const { user } = useContext(AuthContext);
 
   useEffect(() => {
-    fetch("estatesData.json")
+    fetch("https://tuhinbadhon.github.io/Assignmentdatajson/estatesData.json")
       .then((res) => res.json())
       .then((data) => {
         setProperties(data);

@@ -60,7 +60,10 @@ const router = createBrowserRouter([
             <PlotDetails />
           </PrivateRoutes>
         ),
-        loader: () => fetch("/estatesData.json"),
+        loader: () =>
+          fetch(
+            "https://tuhinbadhon.github.io/Assignmentdatajson/estatesData.json"
+          ),
       },
 
       {

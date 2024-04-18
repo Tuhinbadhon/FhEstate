@@ -1,7 +1,7 @@
-website Name: FH Estates,
-website URL: https://bdassignment09.netlify.app
+#Website Name: FH Estates,
+#Website URL: https://bdassignment09.netlify.app
 
-#Features of Our website:-
+# Features of Our website:-
 
 1. User-friendly Interface: Our website boasts an intuitive design, ensuring smooth navigation for visitors. From property listings to advanced search filters, every feature is easily accessible, enhancing user experience.
 
@@ -15,14 +15,15 @@ website URL: https://bdassignment09.netlify.app
 
 6. Engaging Content and Resources: In addition to property listings, Our website offers informative articles, guides, and resources related to residential real estate. From home buying tips to neighborhood profiles, this content enriches the user experience and positions Our website as a valuable resource in the real estate industry.
 
-#The npm packages we have implement in our website are :-
+# The npm packages we have implement in our website are :-
 
 1. Animate.css,
 2. React-leaflet,
 3. React Hook form,
-4. Swiper slider
-5. google firebase-tools
-6. react-helmet
-7. react-toastify
-8. lordicon/element
-9. lottie-web
+4. Swiper slider,
+5. google firebase-tools,
+6. react-helmet,
+7. react-toastify,
+8. lordicon/element,
+9. lottie-web,
+10. AOS Package
