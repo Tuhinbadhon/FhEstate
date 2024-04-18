@@ -18,7 +18,7 @@ const FAQ = () => {
             data-aos-delay="1000"
             data-aos-duration="1000"
             data-aos-anchor="#ankor"
-            className="relative mt-6 mb-12 border border-fuchsia-600 rounded-3xl"
+            className="relative mt-6 mb-12 border border-indigo-500 rounded-3xl"
           >
             <span className="absolute inset-y-0 flex items-center pl-2 mx-auto">
               <button
@@ -52,63 +52,63 @@ const FAQ = () => {
             <a
               rel="noopener noreferrer"
               href="#"
-              className="hover:scale-125 hover:text-fuchsia-500 flex items-center justify-center p-2 border border-fuchsia-600 rounded-lg"
+              className="hover:scale-125 hover:text-indigo-500 flex items-center justify-center p-2 border border-indigo-600 rounded-lg"
             >
               Billing
             </a>
             <a
               rel="noopener noreferrer"
               href="#"
-              className="hover:scale-125 hover:text-fuchsia-500 flex items-center justify-center p-2 border border-fuchsia-600 rounded-lg"
+              className="hover:scale-125 hover:text-indigo-500 flex items-center justify-center p-2 border border-indigo-600 rounded-lg"
             >
               Support
             </a>
             <a
               rel="noopener noreferrer"
               href="#"
-              className="hover:scale-125 hover:text-fuchsia-500 flex items-center justify-center p-2 border border-fuchsia-600 rounded-lg"
+              className="hover:scale-125 hover:text-indigo-500 flex items-center justify-center p-2 border border-indigo-600 rounded-lg"
             >
               Account
             </a>
             <a
               rel="noopener noreferrer"
               href="#"
-              className="hover:scale-125 hover:text-fuchsia-500 flex items-center justify-center p-2 border border-fuchsia-600 rounded-lg"
+              className="hover:scale-125 hover:text-indigo-500 flex items-center justify-center p-2 border border-indigo-600 rounded-lg"
             >
               Features
             </a>
             <a
               rel="noopener noreferrer"
               href="#"
-              className="hover:scale-125 hover:text-fuchsia-500 flex items-center justify-center p-2 border border-fuchsia-600 rounded-lg"
+              className="hover:scale-125 hover:text-indigo-500 flex items-center justify-center p-2 border border-indigo-600 rounded-lg"
             >
               Contact us
             </a>
             <a
               rel="noopener noreferrer"
               href="#"
-              className="hover:scale-125 hover:text-fuchsia-500 flex items-center justify-center p-2 border border-fuchsia-600 rounded-lg"
+              className="hover:scale-125 hover:text-indigo-500 flex items-center justify-center p-2 border border-indigo-600 rounded-lg"
             >
               My orders
             </a>
             <a
               rel="noopener noreferrer"
               href="#"
-              className="hover:scale-125 hover:text-fuchsia-500 flex items-center justify-center p-2 border border-fuchsia-600 rounded-lg"
+              className="hover:scale-125 hover:text-indigo-500 flex items-center justify-center p-2 border border-indigo-600 rounded-lg"
             >
               Enterprise
             </a>
             <a
               rel="noopener noreferrer"
               href="#"
-              className="hover:scale-125 hover:text-fuchsia-500 flex items-center justify-center p-2 border border-fuchsia-600 rounded-lg"
+              className="hover:scale-125 hover:text-indigo-500 flex items-center justify-center p-2 border border-indigo-600 rounded-lg"
             >
               Privacy
             </a>
             <a
               rel="noopener noreferrer"
               href="#"
-              className="hover:scale-125 hover:text-fuchsia-500 flex items-center justify-center p-2 border border-fuchsia-600 rounded-lg"
+              className="hover:scale-125 hover:text-indigo-500 flex items-center justify-center p-2 border border-indigo-600 rounded-lg"
             >
               Developers
             </a>
@@ -116,21 +116,21 @@ const FAQ = () => {
             <a
               rel="noopener noreferrer"
               href="#"
-              className="hover:scale-125 hover:text-fuchsia-500 flex items-center justify-center p-2 border border-fuchsia-600 rounded-lg"
+              className="hover:scale-125 hover:text-indigo-500 flex items-center justify-center p-2 border border-indigo-600 rounded-lg"
             >
               Terms of Service
             </a>
             <a
               rel="noopener noreferrer"
               href="#"
-              className="hover:scale-125 hover:text-fuchsia-500 flex items-center justify-center p-2 border border-fuchsia-600 rounded-lg"
+              className="hover:scale-125 hover:text-indigo-500 flex items-center justify-center p-2 border border-indigo-600 rounded-lg"
             >
               Refund Policy
             </a>
             <a
               rel="noopener noreferrer"
               href="#"
-              className="hover:scale-125 hover:text-fuchsia-500 flex items-center justify-center p-2 border border-fuchsia-600 rounded-lg"
+              className="hover:scale-125 hover:text-indigo-500 flex items-center justify-center p-2 border border-indigo-600 rounded-lg"
             >
               Shipping Information
             </a>
