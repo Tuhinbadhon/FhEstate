@@ -109,7 +109,7 @@ const Login = () => {
             onClick={googleLoginHandler}
             aria-label="Login with Google"
             type="button"
-            className="btn btn-warning flex items-center justify-center w-full p-4 space-x-4 border rounded-md focus:ring-2 focus:ring-offset-1 dark:border-gray-600 focus:dark:ring-violet-600"
+            className="btn bg-gradient-to-r from-blue-500 via-fuchsia-700  to-transparent text-white flex items-center justify-center w-full p-4 space-x-4 border rounded-md focus:ring-2 focus:ring-offset-1 dark:border-gray-200 focus:dark:ring-violet-100"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -124,7 +124,7 @@ const Login = () => {
             onClick={githubLoginHandler}
             aria-label="Login with GitHub"
             role="button"
-            className="btn btn-info flex items-center justify-center w-full p-4 space-x-4 border rounded-md focus:ring-2 focus:ring-offset-1 dark:border-gray-600 focus:dark:ring-violet-600"
+            className="btn bg-gradient-to-l text-white from-green-500 via-amber-500 to-transparent bg-opacity-5 flex items-center justify-center w-full p-4 space-x-4 border rounded-md focus:ring-2 focus:ring-offset-1 dark:border-gray-100 focus:dark:ring-violet-100"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
