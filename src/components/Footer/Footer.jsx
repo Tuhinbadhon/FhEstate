@@ -8,7 +8,7 @@ const Footer = () => {
       <footer
         className=" bg-gradient-to-b from-green-100 via-amber-100 to-transparent
       bg-opacity-5  place-items-center w-full gap-4 
-            bg-base-200 text-base-content flex flex-col py-5 lg:pt-20 md:pt-10 md:pb-4 lg:mb-6 lg:mt-20 mt-5 lg:px-32 px-5 "
+            bg-base-200 text-base-content flex flex-col py-10 lg:pt-20 md:py-10  lg:mb-6 lg:mt-20 mt-5 lg:px-32 px-5 "
       >
         <div className="w-full flex  lg:flex-row md:flex-row flex-col gap-4 lg:justify-between ">
           <div className="flex flex-col  text-center  ">
@@ -64,7 +64,7 @@ const Footer = () => {
 
           <form className="">
             <fieldset className="form-control lg:w-80 mx-auto">
-              <label className="label mx-auto">
+              <label className="label mx-auto mb-2">
                 <span className="label-text">Enter your email address</span>
               </label>
               <div class="lg:flex lg:justify-center lg:mx-auto">

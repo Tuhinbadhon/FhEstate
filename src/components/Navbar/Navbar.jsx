@@ -1,17 +1,26 @@
+import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import lottie from "lottie-web";
 import { defineElement } from "@lordicon/element";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { useContext } from "react";
 import Swal from "sweetalert2";
 
 import { AuthContext } from "../../Provider/AuthProvider";
-//  "lord-icon" custom element with default properties
+import auth from "../../../firebase.config";
+
 defineElement(lottie.loadAnimation);
 
 const Navbar = () => {
   const { user, signOutUser, loading } = useContext(AuthContext);
+  const [showUserDetails, setShowUserDetails] = useState(false);
+
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      setUser(user);
+    });
+    return () => unsubscribe();
+  }, []);
 
   const navlink = (
     <>
@@ -37,32 +46,19 @@ const Navbar = () => {
       )}
     </>
   );
-  // if(!loading)
-  // alert(user.photoURL);
+
   const photoIcon = (
     <>
       <div className="w-10 rounded-full">
         <lord-icon
           className="w-full h-full"
-          src="https://cdn.lordicon.com/szoiozyr.json"
+          src="https://cdn.lordicon.com/kthelypq.json"
           trigger="loop"
           delay="500"
           colors="primary:#000"
           style={{ width: "40px", height: "40px" }}
         ></lord-icon>
       </div>
-    </>
-  );
-
-  const userDetailsCard = (
-    <>
-      {/* <div className="dropdown dropdown-hover dropdown-bottom dropdown-end">
-        <div tabIndex={0} role="button" className="btn m-1">Hover</div>
-            <ul tabIndex={0} className="dropdown-content z-[10] menu p-2 shadow bg-base-100 rounded-box w-52">
-                <li><a>{user.displayName}</a></li>
-                <li><a>{user.photoURL}</a></li>
-            </ul>
-        </div> */}
     </>
   );
 
@@ -83,7 +79,11 @@ const Navbar = () => {
   };
 
   const showNameOnHover = () => {
-    userDetailsCard;
+    setShowUserDetails(true);
+  };
+
+  const hideNameOnHover = () => {
+    setShowUserDetails(false);
   };
 
   return (
@@ -147,12 +147,11 @@ const Navbar = () => {
             <span className="loading mx-auto loading-spinner text-warning"></span>
           ) : user ? (
             <>
-              {/* loading section  */}
               <div
-                tabIndex={0}
-                role="button"
-                className="btn btn-ghost btn-circle avatar"
+                className="btn btn-ghost tooltip tooltip-bottom btn-circle avatar"
                 onMouseEnter={showNameOnHover}
+                onMouseLeave={hideNameOnHover}
+                data-tip={user.displayName}
               >
                 {user.photoURL ? (
                   <img
@@ -164,21 +163,13 @@ const Navbar = () => {
                   photoIcon
                 )}
               </div>
-              <Link to="/login">
-                <button className="btn btn-neutral" onClick={logOutHandler}>
-                  Log Out{" "}
-                </button>
-              </Link>
+              <button className="btn btn-neutral" onClick={logOutHandler}>
+                Log Out{" "}
+              </button>
             </>
           ) : (
             <>
-              <div
-                tabIndex={0}
-                role="button"
-                className="btn btn-ghost btn-circle avatar"
-              >
-                {photoIcon}
-              </div>
+              <div className="btn btn-ghost btn-circle avatar">{photoIcon}</div>
               <Link to="/login">
                 <button className="btn btn-neutral">Login</button>
               </Link>
