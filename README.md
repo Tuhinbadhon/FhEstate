@@ -27,4 +27,5 @@
 7. react-toastify,
 8. lordicon/element,
 9. lottie-web,
-10. AOS Package
+10. AOS Package,
+11. sweetalert.
