@@ -14,6 +14,7 @@ defineElement(lottie.loadAnimation);
 const Navbar = () => {
   const { user, signOutUser, loading } = useContext(AuthContext);
   const [showUserDetails, setShowUserDetails] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
@@ -22,26 +23,40 @@ const Navbar = () => {
     return () => unsubscribe();
   }, []);
 
+  const setUser = (user) => {
+    // Your setUser logic here
+  };
+
   const navlink = (
     <>
       <li>
-        <Link to="/">Home</Link>
+        <Link to="/" onClick={() => setIsDropdownOpen(false)}>
+          Home
+        </Link>
       </li>
       {user ? (
         <>
           <li>
-            <Link to="/profile">View Profile</Link>
+            <Link to="/profile" onClick={() => setIsDropdownOpen(false)}>
+              View Profile
+            </Link>
           </li>
           <li>
-            <Link to="/updateprofile">Update Profile</Link>
+            <Link to="/updateprofile" onClick={() => setIsDropdownOpen(false)}>
+              Update Profile
+            </Link>
           </li>
           <li>
-            <Link to="/Appointment/0">Appointment</Link>
+            <Link to="/Appointment/0" onClick={() => setIsDropdownOpen(false)}>
+              Appointment
+            </Link>
           </li>
         </>
       ) : (
         <li>
-          <Link to="/registration">Registration</Link>
+          <Link to="/registration" onClick={() => setIsDropdownOpen(false)}>
+            Registration
+          </Link>
         </li>
       )}
     </>
@@ -78,12 +93,8 @@ const Navbar = () => {
       });
   };
 
-  const showNameOnHover = () => {
-    setShowUserDetails(true);
-  };
-
-  const hideNameOnHover = () => {
-    setShowUserDetails(false);
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
   };
 
   return (
@@ -96,6 +107,7 @@ const Navbar = () => {
               tabIndex={0}
               role="button"
               className="btn btn-ghost p-0 lg:hidden"
+              onClick={toggleDropdown}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -112,13 +124,14 @@ const Navbar = () => {
                 />
               </svg>
             </div>
-            <ul
-              tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 
-                        z-[10] p-2 shadow bg-base-100 rounded-box w-52 font-semibold text-black"
-            >
-              {navlink}
-            </ul>
+            {isDropdownOpen && (
+              <ul
+                tabIndex={0}
+                className="menu menu-sm dropdown-content mt-3 z-[10] p-2 shadow bg-base-100 rounded-box w-52 font-semibold text-black"
+              >
+                {navlink}
+              </ul>
+            )}
           </div>
           <div className="flex flex-row w-auto">
             <Link to="/">
@@ -149,8 +162,8 @@ const Navbar = () => {
             <>
               <div
                 className="btn btn-ghost tooltip tooltip-bottom btn-circle avatar"
-                onMouseEnter={showNameOnHover}
-                onMouseLeave={hideNameOnHover}
+                onMouseEnter={() => setShowUserDetails(true)}
+                onMouseLeave={() => setShowUserDetails(false)}
                 data-tip={user.displayName}
               >
                 {user.photoURL ? (
