@@ -10,7 +10,7 @@ const Footer = () => {
       bg-opacity-5  place-items-center w-full gap-4 
             bg-base-200 text-base-content flex flex-col  lg:pt-20 md:py-10  lg:mb-6 lg:mt-20 mt-5 lg:px-32 px-5 "
       >
-        <div className="w-full flex  lg:flex-row md:flex-row flex-col gap-4 lg:justify-between ">
+        <div className="w-full flex  lg:flex-row md:flex-row md:justify-between flex-col gap-4 lg:justify-between ">
           <div className="flex flex-col  text-center  ">
             <h6 className="footer-title ">Services</h6>
             <a className="link link-hover">Plots</a>
@@ -22,6 +22,7 @@ const Footer = () => {
             <h6 className="footer-title">Contacts</h6>
             <a className="link link-hover">+8801815-0000000</a>
             <a className="link link-hover">tuhinbadhon@gmail.com</a>
+            <a className="link link-hover">Address: Dhanmondi,Dhaka</a>
           </div>
           <div className="text-center">
             <h6 className="footer-title">Social</h6>
@@ -81,7 +82,7 @@ const Footer = () => {
           </form>
         </div>
       </footer>
-      <div className="font-semibold  text-center mb-2 md:mb-8 max-[450px]:pb-5 lg:mb-14">
+      <div className="font-semibold  text-center mb-2 md:mb-8 max-[450px]:pb-5 px-5 lg:mb-14">
         <p>
           Copyright © 2024 - All right reserved by{" "}
           <Link
