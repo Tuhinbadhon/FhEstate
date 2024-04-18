@@ -13,6 +13,7 @@
     "@lordicon/element": "^1.6.0",
     "animate": "^1.0.0",
     "animate.css": "^4.1.1",
+    "aos": "^3.0.0-beta.6",
     "firebase": "^10.10.0",
     "helmet": "^7.1.0",
     "loadanimation": "^1.0.1",

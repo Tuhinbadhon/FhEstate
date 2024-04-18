@@ -28,7 +28,7 @@ const Login = () => {
     signInUser(email, password)
       .then((result) => {
         Swal.fire({
-          text: "Successful login",
+          text: "Successfully login",
           icon: "success",
         });
 
@@ -50,7 +50,7 @@ const Login = () => {
     signInWithGoogle()
       .then((result) => {
         Swal.fire({
-          text: "Successful login",
+          text: "Successfully login",
           icon: "success",
         });
         navigate("/");
@@ -69,7 +69,7 @@ const Login = () => {
       .then((result) => {
         const loggedUser = result.user;
         Swal.fire({
-          text: "Successful login",
+          text: "Successfully login",
           icon: "success",
         });
         navigate("/");

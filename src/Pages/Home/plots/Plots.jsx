@@ -48,10 +48,19 @@ const Plots = () => {
     <div className="">
       {/* paragraph section */}
       <div className="text-center max-w-screen-sm mx-auto  px-2 lg:px-0 mb-6 lg:mt-20">
-        <h1 className="text-lg font-medium lg:text-3xl lg:font-bold  ">
+        <h1
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          className="text-lg font-medium lg:text-3xl lg:font-bold  "
+        >
           Our Property Collections
         </h1>
-        <p className="text-sm lg:text-lg font-normal lg:mt-10">
+        <p
+          data-aos="fade-left"
+          data-aos-delay="500"
+          data-aos-duration="1000"
+          className="text-sm lg:text-lg font-normal lg:mt-10"
+        >
           Discover our website's newest array of properties, carefully
           handpicked to offer a diverse range of options, ensuring that each
           visitor discovers their ideal property effortlessly. Our collection
@@ -104,7 +113,7 @@ const Plots = () => {
                   {user ? (
                     <Link to={`/property/${property.id}`}>
                       <button className="btn bg-indigo-400 text-white rounded-xl">
-                        View Details
+                        View Property
                       </button>
                     </Link>
                   ) : (
@@ -112,7 +121,7 @@ const Plots = () => {
                       onClick={viewDetailsDeny}
                       className="btn bg-indigo-400 text-white rounded-xl"
                     >
-                      View Details
+                      View Property
                     </button>
                   )}
                 </div>

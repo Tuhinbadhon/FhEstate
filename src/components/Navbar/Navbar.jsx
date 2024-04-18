@@ -70,7 +70,7 @@ const Navbar = () => {
     signOutUser()
       .then(() => {
         Swal.fire({
-          text: "Successful logout",
+          text: "Successfully logout",
           icon: "success",
         });
       })

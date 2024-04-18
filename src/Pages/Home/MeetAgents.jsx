@@ -10,20 +10,33 @@ const MeetAgents = () => {
     <div className="h-full">
       {/* paragraph section */}
       <div className="text-center max-w-screen-sm mx-auto px-2 lg:px-0 mb-6">
-        <h1 className="text-lg font-medium lg:text-3xl lg:font-bold  ">
+        <h1
+          data-aos="fade-down"
+          data-aos-duration="1000"
+          data-aos-offset="300"
+          data-aos-easing="ease-in-sine"
+          className="text-lg font-medium lg:text-3xl lg:font-bold  mt-6 lg:mt-20 "
+        >
           Meet Our Agents
         </h1>
-        <p className="text-sm lg:text-lg font-normal">
-          Discover the expertise and dedication of our experienced agents, ready
-          to guide you through every step of your real estate journey. Meet our
-          team today and unlock the keys to your dream property.
+        <p
+          data-aos="fade-right"
+          data-aos-delay="1000"
+          data-aos-duration="1000"
+          data-aos-offset="300"
+          data-aos-easing="ease-in-sine"
+          className="text-sm lg:text-lg font-normal mt-6 mb-6"
+        >
+          Embark on your real estate journey with our team of dedicated experts,
+          poised to navigate every step alongside you. Meet our seasoned agents
+          today, and let us unlock the doors to your dream property.
         </p>
       </div>
 
       {/* card section  */}
       <div className="grid sm:grid-cols-1 md:grid-cols-3 md:p-4 lg:grid-cols-3 gap-4 lg:gap-6 justify-center">
         {/* agent 1 */}
-        <div className=" hover:scale-110 ease-in duration-300  flex flex-col justify-center max-w-xs p-6 shadow-md rounded-xl sm:px-12 dark:bg-gray-50 dark:text-gray-800">
+        <div className="  hover:scale-110 ease-in duration-300  flex flex-col justify-center max-w-xs p-6 shadow-md rounded-xl sm:px-12 dark:bg-gray-50 dark:text-gray-800">
           <img
             src="https://i.ibb.co/xjsyCLx/leo.webp"
             alt=""

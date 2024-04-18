@@ -3,12 +3,23 @@ import React from "react";
 const FAQ = () => {
   return (
     <div>
-      <section className="dark:bg-gray-100 dark:text-gray-800">
+      <section className=" relative dark:bg-gray-100 dark:text-gray-800">
         <div className="container flex flex-col items-center p-4 mx-auto md:p-8">
-          <h1 className="text-lg font-medium lg:text-3xl lg:font-bold text-center">
+          <h1
+            data-aos="fade-down"
+            data-aos-duration="1000"
+            data-aos-anchor="#ankor"
+            className="text-lg font-medium lg:text-3xl lg:font-bold text-center"
+          >
             Frequently Asked Questions
           </h1>
-          <div className="relative mt-6 mb-12 border border-fuchsia-600 rounded-3xl">
+          <div
+            data-aos="fade-left"
+            data-aos-delay="1000"
+            data-aos-duration="1000"
+            data-aos-anchor="#ankor"
+            className="relative mt-6 mb-12 border border-fuchsia-600 rounded-3xl"
+          >
             <span className="absolute inset-y-0 flex items-center pl-2 mx-auto">
               <button
                 type="submit"
@@ -31,7 +42,13 @@ const FAQ = () => {
               className="w-full py-3 pl-12 text-sm rounded-full sm:w-96 focus:outline-none dark:bg-gray-100 dark:text-gray-800 focus:dark:bg-gray-50"
             />
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          <div
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="1500"
+            data-aos-anchor="#ankor"
+            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
+          >
             <a
               rel="noopener noreferrer"
               href="#"
@@ -119,6 +136,7 @@ const FAQ = () => {
             </a>
           </div>
         </div>
+        <div id="ankor" className="absolute   right-0 bottom-[30%]"></div>
       </section>
     </div>
   );
