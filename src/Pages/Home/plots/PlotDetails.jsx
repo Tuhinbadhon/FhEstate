@@ -1,14 +1,20 @@
 import React from "react";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 import { useParams, useLoaderData, Link } from "react-router-dom";
 const PlotDetails = () => {
   const { id } = useParams();
   const plotVar = useLoaderData();
-
+  const helmetContext = {};
   const plotId = parseInt(id);
   const plot = plotVar.find((plot) => plot.id === plotId);
 
   return (
     <div className="my-10 p-2">
+      <HelmetProvider context={helmetContext}>
+        <Helmet>
+          <title>{plot.title}</title>
+        </Helmet>
+      </HelmetProvider>
       <div className="card lg:card-side bg-base-100 shadow-xl">
         <figure className=" ">
           <img src={plot.image} alt="Album" className="p-4  " />
