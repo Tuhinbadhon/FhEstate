@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import lottie from "lottie-web";
 import { defineElement } from "@lordicon/element";
@@ -7,25 +7,24 @@ import "react-toastify/dist/ReactToastify.css";
 import Swal from "sweetalert2";
 
 import { AuthContext } from "../../Provider/AuthProvider";
-import auth from "../../../firebase.config";
 
 defineElement(lottie.loadAnimation);
 
 const Navbar = () => {
-  const { user, signOutUser, loading } = useContext(AuthContext);
+  const { user, signOutUser } = useContext(AuthContext);
   const [showUserDetails, setShowUserDetails] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
-  useEffect(() => {
-    const unsubscribe = auth.onAuthStateChanged((user) => {
-      setUser(user);
-    });
-    return () => unsubscribe();
-  }, []);
+  // useEffect(() => {
+  //   const unsubscribe = auth.onAuthStateChanged((user) => {
+  //     setUser(user);
+  //   });
+  //   return () => unsubscribe();
+  // }, []);
 
-  const setUser = (user) => {
-    // Your setUser logic here
-  };
+  // const setUser = (user) => {
+  //   // Your setUser logic here
+  // };
 
   const navlink = (
     <>
@@ -156,9 +155,7 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end flex gap-2">
-          {loading ? (
-            <span className="loading mx-auto loading-spinner text-warning"></span>
-          ) : user ? (
+          {user ? (
             <>
               <div
                 className="btn btn-ghost tooltip tooltip-bottom btn-circle avatar"

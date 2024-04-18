@@ -9,7 +9,11 @@ const AgentsAppointment = () => {
   };
 
   return (
-    <div className="flex flex-col gap-4">
+    <div
+      data-aos="fade-up"
+      data-aos-duration="1000"
+      className="flex flex-col gap-4"
+    >
       {/* Show selected agent name */}
       {selectedAgent && (
         <div className="rounded-lg p-4 bg-accent dark:bg-gray-100 max-w-sm text-center">

@@ -5,8 +5,10 @@ import { Outlet } from "react-router-dom";
 const MainLayout = () => {
   return (
     <div>
-      <div className="max-w-6xl mx-auto lg:mt-5 mt-3">
+      <div className=" lg:mt-5 mt-3  lg:mx-10">
         <Navbar />
+      </div>
+      <div className="max-w-6xl mx-auto lg:mt-5 mt-3">
         <Outlet />
       </div>
       <Footer />

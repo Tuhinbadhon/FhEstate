@@ -7,7 +7,7 @@ import "animate.css";
 import { Link } from "react-router-dom";
 const MeetAgents = () => {
   return (
-    <div className="h-full">
+    <div className="h-full " data-aos="fade-up" data-aos-duration="1000">
       {/* paragraph section */}
       <div className="text-center max-w-screen-sm mx-auto px-2 lg:px-0 mb-6">
         <h1

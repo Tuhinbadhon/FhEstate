@@ -70,7 +70,11 @@ const Plots = () => {
       </div>
 
       {/* card section */}
-      <div className="grid sm:grid-cols-1 max-[450px]:mx-4   md:grid-cols-2 lg:grid-cols-3 lg:mt-10 gap-4 lg:gap-6">
+      <div
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        className="grid sm:grid-cols-1 max-[450px]:mx-4   md:grid-cols-2 lg:grid-cols-3 lg:mt-10 gap-4 lg:gap-6"
+      >
         {properties.map((property, index) => (
           <div
             key={property.id}
